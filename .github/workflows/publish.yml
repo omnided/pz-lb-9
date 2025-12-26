@@ -38,5 +38,5 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2 
         with: 
-          app-name: som_group 
+          app-name: ASP-somgroup-af63
           images: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
