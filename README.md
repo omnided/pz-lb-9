@@ -20,7 +20,7 @@
 
 **Використана команда:**
 ```bash
-az ad sp create-for-rbac --name "myApp" --role contributor --scopes /subscriptions/<subscription_id>/resourceGroups/<resource_group_name> --json-auth
+az ad sp create-for-rbac --name "myApp" --role contributor --scopes /subscriptions/0280aa08-30f0-42b2-a833-e6c22229b115/resourceGroups/som_group --json-auth
 ```
 Замість <subscription_id> та <resource_group_name> було підставлено власні дані.
 
@@ -59,7 +59,7 @@ Secret: (Вставлено JSON-вивід з попереднього крок
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: <НАЗВА_ВАШОГО_APP_SERVICE>
+          app-name: som
           images: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
 ```
 ## 5. Запуск та перевірка
