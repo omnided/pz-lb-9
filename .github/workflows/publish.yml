@@ -47,7 +47,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with: 
           app-name: som  # Правильне ім'я вашого App Service
           # Тепер цей рядок спрацює, бо ми додали створення тегу latest вище
